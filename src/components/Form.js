@@ -21,7 +21,6 @@ export default function Form(props) {
 
   function handleSubmit(e) {
     // executes submit button is clicked
-
     props.setUserFormData(formData);
   }
 
