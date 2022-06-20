@@ -1,6 +1,5 @@
 import EditTableRow from "./EditTableRow";
 import { useState } from "react";
-
 import { deleteReceipt } from "../api/receipts";
 
 export default function Table(props) {
@@ -32,8 +31,7 @@ export default function Table(props) {
 
   return (
     <div>
-      (
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>
@@ -49,16 +47,16 @@ export default function Table(props) {
                 <td>{data.name}</td>
                 <td> {data.location}</td>
                 {/* convert to two decimal places  */}
-                <td>{Number(data.cost).toFixed(2)} </td>
+                <td>£{Number(data.cost).toFixed(2)} </td>
                 <td>{formatDate(data.createdAt)} </td>
                 <td>
-                  <button onClick={editRow} className={data._id}>
+                  <button onClick={editRow} className={data._id} id="edit">
                     Edit
                   </button>
                 </td>
 
                 <td>
-                  <button onClick={deleteRow} className={data._id}>
+                  <button onClick={deleteRow} className={data._id} id="delete">
                     Delete
                   </button>
                 </td>
