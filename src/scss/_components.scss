@@ -1,0 +1,48 @@
+//Form.js
+.form {
+  &__item label,
+  input,
+  button {
+    display: block;
+    font-size: 1.2rem;
+  }
+  &__item button {
+    @include actionButton(blue);
+  }
+}
+
+// Table.js
+
+.table {
+  font-size: 1.4rem;
+}
+
+thead,
+th,
+td,
+tr {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#edit {
+  @include actionButton(rgba(0, 128, 0, 0.815));
+}
+
+#delete {
+  @include actionButton(rgba(255, 0, 0, 0.897));
+}
+
+//editTableRow.js
+
+.editForm {
+  .editForm label,
+  input,
+  button {
+    font-size: $fontSize;
+  }
+}
+
+#applyChanges {
+  @include actionButton(blue);
+}

@@ -1,0 +1,39 @@
+// Form.js
+
+.form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    margin: 10px;
+  }
+
+  &__item label,
+  input,
+  button {
+    display: block;
+  }
+}
+
+//table.js
+
+.table {
+  margin: auto;
+}
+
+//editTableRow.js
+
+.editForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+
+  .editForm label,
+  input,
+  button {
+    margin: 10px;
+  }
+}
