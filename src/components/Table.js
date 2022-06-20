@@ -3,11 +3,11 @@ import { useState } from "react";
 import { deleteReceipt } from "../api/receipts";
 
 export default function Table(props) {
-  const [isEdit, setIsEdit] = useState(false);
+  const [isEdit, setIsEdit] = useState(false); // track if edit button is clicked
 
-  const [editFormData, setEditFormData] = useState();
+  const [editFormData, setEditFormData] = useState(); // stores the new data the user enters
 
-  const [storeUpdateId, setStoreUpdataId] = useState();
+  const [storeUpdateId, setStoreUpdataId] = useState(); // stores the id of item the user wants to update
 
   function deleteRow(e) {
     // function to delete
@@ -18,6 +18,7 @@ export default function Table(props) {
   }
 
   function editRow(e) {
+    // retrive if of which edit button was clicked
     setIsEdit((prev) => !prev);
     const { className } = e.target;
     setStoreUpdataId(className);
@@ -65,6 +66,7 @@ export default function Table(props) {
           })}
         </tbody>
       </table>
+      {/* render edit form */}
       {isEdit == true && storeUpdateId != null && (
         <EditTableRow
           storeUpdateId={storeUpdateId}

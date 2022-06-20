@@ -2,6 +2,8 @@ import { useState } from "react";
 import { updateReceipt } from "../api/receipts";
 
 export default function EditTableRow(props) {
+  //form to edit a row in the table
+
   const [formData, setFormData] = useState({
     name: "",
     location: "",
@@ -20,6 +22,7 @@ export default function EditTableRow(props) {
   }
 
   function handleSubmit(e) {
+    // call update api
     updateReceipt(props.storeUpdateId, formData);
   }
 
