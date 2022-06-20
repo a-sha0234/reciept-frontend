@@ -24,7 +24,7 @@ This is a front end which allows users to make restful requests to the backend t
 ## Screenshots
 
 <div align="center">
-    <img src="./screenshot.png" width="400px"/>
+    <img src="./public/screenshot.png" width="400px"/>
 </div>
 
 ## Challanges I faced
