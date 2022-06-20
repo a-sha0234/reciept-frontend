@@ -25,35 +25,43 @@ export default function Form(props) {
   }
 
   return (
-    <form>
-      <label>Name</label>
-      <input
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        type="text"
-        required
-      ></input>
+    <form className="form">
+      <div className="form__item">
+        <label>Name</label>
+        <input
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          type="text"
+          required
+        ></input>
+      </div>
       {/*  */}
-      <label>Location</label>
-      <input
-        name="location"
-        value={formData.location}
-        onChange={handleChange}
-        type="text"
-        required
-      ></input>
+      <div className="form__item">
+        <label>Location</label>
+        <input
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          type="text"
+          required
+        ></input>
+      </div>
       {/*  */}
-      <label>Price</label>
-      <input
-        name="price"
-        value={formData.price}
-        onChange={handleChange}
-        type="number"
-        required
-      ></input>
+      <div className="form__item">
+        <label>Price</label>
+        <input
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+          type="number"
+          required
+        ></input>
+      </div>
       {/*  */}
-      <button onClick={handleSubmit}>Submit</button>
+      <div className="form__item">
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
     </form>
   );
 }

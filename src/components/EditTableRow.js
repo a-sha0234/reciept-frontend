@@ -25,7 +25,7 @@ export default function EditTableRow(props) {
 
   console.log(formData.name, formData.location);
   return (
-    <form>
+    <form className="editForm">
       <label>Name</label>
       <input
         name="name"
@@ -50,7 +50,9 @@ export default function EditTableRow(props) {
         onChange={handleChange}
         required
       ></input>
-      <button onClick={handleSubmit}>Apply Changes </button>
+      <button onClick={handleSubmit} id="applyChanges">
+        Apply Changes{" "}
+      </button>
     </form>
   );
 }
